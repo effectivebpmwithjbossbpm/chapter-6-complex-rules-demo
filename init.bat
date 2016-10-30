@@ -2,7 +2,7 @@
 setlocal
 
 set PROJECT_HOME=%~dp0
-set DEMO=Install Demo
+set DEMO=Chapter 6 Complex Rules Demo
 set AUTHORS=Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:effectivebpmwithjbossbpm/chapter-6-complex-rules-demo.git
 set PRODUCT=JBoss BPM Suite
@@ -24,7 +24,7 @@ cls
 echo.
 echo ##########################################################################
 echo ##                                                                      ##   
-echo ##  Setting up the %DEMO%                                         ##
+echo ##  Setting up the %DEMO%                              ##
 echo ##                                                                      ##   
 echo ##                                                                      ##   
 echo ##     ####  ####   #   #      ### #   # ##### ##### #####              ##
@@ -141,13 +141,19 @@ echo.
 xcopy /Y /Q "%SUPPORT_DIR%\userinfo.properties" "%SERVER_DIR%\business-central.war\WEB-INF\classes\"
 
 echo.
-echo You can now start the %PRODUCT% with %SERVER_BIN%\standalone.bat
-echo.
-echo You can open business central in browser at:
-echo.
-echo  localhost:8080/business-central 
-echo.
-echo and log in as user: erics and password: bpmsuite1!
-echo.
-echo %PRODUCT% %VERSION% %DEMO% Setup Complete.
+echo ========================================================================
+echo =                                                                      =
+echo =  You can now start the %PRODUCT% with:                         =
+echo =                                                                      =
+echo =   %SERVER_BIN%\standalone.bat                           =
+echo =                                                                      =
+echo =  Log in into business central at:                                    =
+echo =                                                                      =
+echo =    http://localhost:8080/business-central  [u:erics / p:bpmsuite1!]  =
+echo =                                                                      =
+echo =  See README.md for general details to run the various demo cases.    =
+echo =                                                                      =
+echo =  %PRODUCT% %VERSION% %DEMO% Setup Complete.            =
+echo =                                                                      =
+echo ========================================================================
 echo.
