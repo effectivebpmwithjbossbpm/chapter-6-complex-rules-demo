@@ -10,13 +10,13 @@ Option 1 - Install on your machine
 ----------------------------------
 1. [Download and unzip.](https://github.com/effectivebpmwithjbossbpm/chapter-6-complex-rules-demo/archive/master.zip)
 
-2. Add product installer to installs directory.
+2. Download JBoss EAP & JBoss BPM Suite, add to installs directory (see installs/README).
 
 3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges. 
 
 4. Login to http://localhost:8080/business-central  (u:erics / p:bpmsuite1!)
 
-5. Enjoy installed and configured JBoss BPM Suite.
+Enjoy installed and configured JBoss BPM Suite.
 
 
 Option 2 - Generate containerized installation
@@ -25,28 +25,28 @@ The following steps can be used to configure and run the demo in a container
 
 1. [Download and unzip.](https://github.com/effectivebpmwithjbossbpm/chapter-6-complex-rules-demo/archive/master.zip)
 
-2. Add product installer to installs directory.
+2. Download JBoss EAP & JBoss BPM Suite, add to installs directory (see installs/README).
 
 3. Build demo image.
 
 	```
 	docker build -t effectivebpmwithjbossbpm/chapter-6-complex-rules-demo .
 	```
+
 4. Start demo container
 
 	```
 	docker run -it -p 8080:8080 -p 9990:9990 effectivebpmwithjbossbpm/chapter-6-complex-rules-demo
 	```
-5. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central (u:erics / p:bpmsuite1!) 
 
-   ```
-   determine DOCKER_HOST with $ docker-machine env
-   ```
+Login to http://localhost:8080/business-central (u:erics / p:bpmsuite1!) 
 
 
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v1.1 - JBoss BPM Suite 6.4.0, JBoss EAP 7.0.0 and complex rules examples installed.
 
 - v1.0 - JBoss BPM Suite 6.3.0, JBoss EAP 6.4.7 and complex rules examples installed.
 
