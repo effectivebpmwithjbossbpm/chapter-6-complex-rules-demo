@@ -46,7 +46,7 @@ RUN chown -R 1000:1000 $BPMS_HOME/bin/.niogit $BPMS_HOME/standalone/configuratio
 USER 1000
 
 # Expose Ports
-EXPOSE 9990 9999 8080
+EXPOSE 9990 9999 8080 8001
 
 # Run BPMS
 CMD ["/opt/jboss/bpms/jboss-eap-7.0/bin/standalone.sh","-c","standalone.xml","-b", "0.0.0.0","-bmanagement","0.0.0.0"]
